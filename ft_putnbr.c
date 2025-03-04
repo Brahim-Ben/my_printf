@@ -6,7 +6,7 @@
 /*   By: bbenaali <bbenaali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 09:40:04 by bbenaali          #+#    #+#             */
-/*   Updated: 2024/11/22 09:25:05 by bbenaali         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:28:58 by bbenaali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,5 @@ int	ft_putnbr(int n)
 		ft_putchar (n + '0');
 	return (counter);
 }
+
+
