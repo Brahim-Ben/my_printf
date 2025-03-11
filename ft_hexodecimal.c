@@ -15,21 +15,12 @@
 static int	ft_hexodecimal_lower(unsigned long n, int count)
 {
 	int	counter;
+	char	*s[16] = "0123456789abcdef";
 
 	counter = 0;
 	counter = count;
-	if (n == 10)
-		counter += ft_putchar('a');
-	else if (n == 11)
-		counter += ft_putchar('b');
-	else if (n == 12)
-		counter += ft_putchar('c');
-	else if (n == 13)
-		counter += ft_putchar('d');
-	else if (n == 14)
-		counter += ft_putchar('e');
-	else if (n == 15)
-		counter += ft_putchar('f');
+	if (n < 16)
+		counter += ft_putstr(s[n]);
 	else if (n >= 16)
 	{
 		counter = ft_hexodecimal_lower(n / 16, counter);
@@ -43,21 +34,12 @@ static int	ft_hexodecimal_lower(unsigned long n, int count)
 static int	ft_hexodecimal_upper(unsigned long n, int count)
 {
 	int	counter;
+	char	*s[16] = "0123456789ABCDEF";
 
 	counter = 0;
 	counter = count;
-	if (n == 10)
-		counter += ft_putchar('A');
-	else if (n == 11)
-		counter += ft_putchar('B');
-	else if (n == 12)
-		counter += ft_putchar('C');
-	else if (n == 13)
-		counter += ft_putchar('D');
-	else if (n == 14)
-		counter += ft_putchar('E');
-	else if (n == 15)
-		counter += ft_putchar('F');
+	if (n < 16)
+		counter += ft_putstr(s[n]);
 	else if (n >= 16)
 	{
 		counter = ft_hexodecimal_upper(n / 16, counter);
