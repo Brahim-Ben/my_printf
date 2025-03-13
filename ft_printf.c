@@ -33,10 +33,7 @@ static int	ft_s(char c, va_list list)
 		counter += ft_hexodecimal(va_arg(list, unsigned long), 'x');
 	}
 	else
-	{
-		write (1, &c, 1);
-		counter++;
-	}
+		counter += write (1, &c, 1);
 	return (counter);
 }
 
@@ -60,8 +57,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else if (format[i] != '%')
 		{
-			write (1, &format[i], 1);
-			counter++;
+			counter += write (1, &format[i], 1);
 		}
 		i++;
 	}
